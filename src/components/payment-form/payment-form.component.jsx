@@ -22,7 +22,7 @@ const PaymentForm = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({amount: amount * 100}), //stripe expects cents
+            body: JSON.stringify({amount: amount * 100}) //stripe expects cents
         }).then((res) => res.json());
     
         const {paymentIntent: {client_secret}} = response;
@@ -31,9 +31,9 @@ const PaymentForm = () => {
             payment_method: {
                 card: elements.getElement(CardElement),
                 billing_details:{
-                    email: currentUser ? currentUser.email : 'Guest no email',
-                },
-            },
+                    email: currentUser ? currentUser.email : 'Guest no email'
+                }
+            }
         });
         console.log(currentUser);
         //console.log(response);
