@@ -35,7 +35,7 @@ const PaymentForm = () => {
                 }
             }
         });
-        console.log(currentUser);
+        //console.log(currentUser);
         //console.log(response);
         setIsProcessingPayment(false);
         if(paymentResult.error){
