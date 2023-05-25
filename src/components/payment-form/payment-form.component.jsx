@@ -31,7 +31,7 @@ const PaymentForm = () => {
             payment_method: {
                 card: elements.getElement(CardElement),
                 billing_details:{
-                    email: currentUser ? 'email: ' +currentUser.email : 'Guest no email'
+                    email: currentUser ? currentUser.email : 'Guest no email'
                 }
             }
         });
