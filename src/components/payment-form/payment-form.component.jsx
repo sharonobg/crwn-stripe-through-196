@@ -31,11 +31,12 @@ const PaymentForm = () => {
             payment_method: {
                 card: elements.getElement(CardElement),
                 billing_details:{
-                    name: currentUser ? 'name: '+currentUser.displayName + ' email: ' + currentUser.email : 'Guest',
+                    email: currentUser ? currentUser.email : 'Guest no email',
                 },
             },
         });
         console.log(currentUser);
+        //console.log(response);
         setIsProcessingPayment(false);
         if(paymentResult.error){
             alert(paymentResult.error);
