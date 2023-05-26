@@ -5,8 +5,6 @@ import {selectCartTotal} from '../../store/cart/cart.selector';
 import {selectCurrentUser} from '../../store/user/user.selector';
 import Button, {BUTTON_TYPE_CLASSES} from '../button/button.component';
 import {PaymentFormContainer,FormContainer,PaymentButton} from './payment-form.styles';
-
-
 const PaymentForm = () => {
     const stripe = useStripe();
     const elements = useElements();
