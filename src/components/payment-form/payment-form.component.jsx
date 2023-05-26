@@ -31,7 +31,7 @@ const PaymentForm = () => {
             payment_method: {
                 card: elements.getElement(CardElement),
                 billing_details:{
-                    email: currentUser ? currentUser.email : 'Guest no email'
+                    name: currentUser ? currentUser.displayName : 'Guest'
                 }
             }
         });
@@ -39,7 +39,7 @@ const PaymentForm = () => {
         //console.log(response);
         setIsProcessingPayment(false);
         if(paymentResult.error){
-            alert('problem! ',paymentResult.error);
+            alert(paymentResult.error);
 
         }else{
             if(paymentResult.paymentIntent.status === 'succeeded'){
